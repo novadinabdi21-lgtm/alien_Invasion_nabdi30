@@ -1,4 +1,4 @@
-Alien Invasion.
+## Alien Invasion.
 
 Alien Invasion is a arcade-style game developed in Python using Pygame. 
 The player controls a spaceship that moves left and right at the bottom of the screen and shoots bullets to destroy waves of invading aliens. 
