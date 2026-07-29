@@ -113,9 +113,9 @@ class AlienInvasion:
         # Update bullet positions.
         self.bullets.update()
 
-        # Get rid of bullets that have disappeared.
+        # Get rid of bullets that have disappeared(me).
         for bullet in self.bullets.copy():
-            if bullet.rect.bottom <= 0:
+            if bullet.rect.left >= self.settings.screen_width:
                 self.bullets.remove(bullet)
 
         self._check_bullet_alien_collisions()
