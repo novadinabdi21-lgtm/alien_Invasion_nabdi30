@@ -1,3 +1,12 @@
+"""
+Purpose: Contains the Alien class that controls individual aliens,
+ movement, and out detection.
+
+Starter Code: Python Crash Course by Eric Matthes
+
+Author: Novadin Abdi
+"""
+
 import pygame
 
 from pygame.sprite import Sprite

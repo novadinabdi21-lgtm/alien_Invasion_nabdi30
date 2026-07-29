@@ -1,3 +1,13 @@
+"""
+Purpose:
+Contains the Ship class that controls the player's
+spaceship position, movement, and appearance.
+
+Starter Code: Python Crash Course by Eric Matthes
+
+Author: Novadin Abdi
+"""
+
 import pygame
 
 

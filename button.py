@@ -1,3 +1,12 @@
+"""
+Purpose: Contains the Button class used to create and display
+the Play button in the Alien Invasion game.
+
+Starter Code: Python Crash Course by Eric Matthes
+
+Author: Novadin Abdi
+"""
+
 import pygame.font
 
 

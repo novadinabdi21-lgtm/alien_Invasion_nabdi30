@@ -1,3 +1,14 @@
+"""
+Purpose:
+Main game that controls the Alien Invasion game.
+Manages game, user input, ship movement,
+bullets, aliens, and screen updates.
+
+starter code: Python Crash Cource by Eric Matthes
+
+Author: Novadin Abdi
+"""
+
 import sys
 from time import sleep
 

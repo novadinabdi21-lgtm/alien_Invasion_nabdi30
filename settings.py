@@ -1,3 +1,12 @@
+"""
+Purpose: Stores all game settings including screen
+size, ship speed, bullet settings, and alien behavior.
+
+Starter Code: Python Crash Course by Eric Matthes
+
+Author: Novadin Abdi
+"""
+
 class Settings:
     """A class to store all settings for Alien Invasion."""
 

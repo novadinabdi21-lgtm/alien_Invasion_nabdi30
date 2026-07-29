@@ -1,3 +1,12 @@
+"""
+Purpose: Contains the Bullet class that manages bullets movement,
+ and drawing for the player's ship.
+
+Starter Code: Python Crash Course by Eric Matthes
+
+Author: Novadin Abdi
+"""
+
 import pygame
 from pygame.sprite import Sprite
 

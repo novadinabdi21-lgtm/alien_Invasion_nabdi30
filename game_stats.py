@@ -1,3 +1,12 @@
+"""
+Purpose: Contains the GameStats class used to track game statistics
+such as remaining ships and game progress.
+
+Starter Code: Python Crash Course by Eric Matthes
+
+Author: Novadin Abdi
+"""
+
 class GameStats:
     """Track statistics for Alien Invasion."""
 
