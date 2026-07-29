@@ -14,31 +14,31 @@ class Ship:
         self.image = pygame.image.load('images/ship.bmp')
         self.rect = self.image.get_rect()
 
-        # Start each new ship on the left side of the screen.
+        # Start each new ship on the left side of the screen.(me)
         self.rect.midleft = self.screen_rect.midleft
 
-        # Store a float for the ship's exact vertical position.
+        # Store a float for the ship's exact vertical position.(me)
         self.y = float(self.rect.y)
 
-        # Movement flags; start with a ship that's not moving.
-        self.moving_right = False
-        self.moving_left = False
+        # Movement flags; start with a ship that's not moving(me).
+        self.moving_up = False
+        self.moving_down = False
 
     def center_ship(self):
-        """Reset the ship to its starting position."""
+        """Reset the ship to its starting position.(me)"""
         self.rect.midleft = self.screen_rect.midleft
         self.y = float(self.rect.y)
 
     def update(self):
-        """Update the ship's position based on movement flags."""
-        # Update the ship's x value, not the rect.
-        if self.moving_right and self.rect.right < self.screen_rect.right:
-            self.x += self.settings.ship_speed
-        if self.moving_left and self.rect.left > 0:
-            self.x -= self.settings.ship_speed
-            
-        # Update rect object from self.x.
-        self.rect.x = self.x
+        # Update the ship's y value, not the rect(me).
+        if self.moving_up and self.rect.top > 0:
+            self.y -= self.settings.ship_speed
+
+        if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
+            self.y += self.settings.ship_speed
+
+        # Update rect object from self.y(me).
+        self.rect.y = self.y
 
     def blitme(self):
         """Draw the ship at its current location."""
