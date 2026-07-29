@@ -10,5 +10,5 @@ I chose **Track 1: Custom Game Mechanics**.
 
 ## Orientation
 
-I will modify the game by changing the ship's position and movement from the original game. The bullets direction and alien movement will also be updated to match the new gameplay style.
+I modified the original game by changing the ship's position and movement. Instead of starting at the bottom of the screen and moving left and right, the ship starts on the left side and moves up and down. The bullets also fire horizontally from the ship's new position. The alien fleet was adjusted a little.
 
