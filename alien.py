@@ -25,8 +25,8 @@ class Alien(Sprite):
         self.image = pygame.image.load('images/alien.bmp')
         self.rect = self.image.get_rect()
 
-        # Start each new alien near the top left of the screen.
-        self.rect.x = self.rect.width
+        # Start each new alien near the top right of the screen. (me)
+        self.rect.x = self.screen.get_rect().right - (2 * self.rect.width)
         self.rect.y = self.rect.height
 
         # Store the alien's exact horizontal position.(me)
