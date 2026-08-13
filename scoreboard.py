@@ -1,3 +1,12 @@
+"""
+Purpose: Contains the Scoreboard class that displays the score,
+high score, and remaining lives.
+
+Starter Code: Python Crash Course by Eric Matthes
+
+Author: Novadin Abdi
+"""
+
 import pygame.font
 
 
