@@ -162,22 +162,22 @@ class AlienInvasion:
     def _ship_hit(self):
         """Respond to the ship being hit by an alien."""
         if self.stats.ships_left > 0:
-            # Decrement ships_left.
             self.stats.ships_left -= 1
 
-            # Get rid of any remaining bullets and aliens.
+            # Update the lives display.
+            self.sb.prep_ships()
+
             self.bullets.empty()
             self.aliens.empty()
 
-            # Create a new fleet and center the ship.
             self._create_fleet()
             self.ship.center_ship()
 
-            # Pause.
             sleep(0.5)
         else:
             self.game_active = False
             pygame.mouse.set_visible(True)
+            
 
     def _update_aliens(self):
         """Update the positions of all aliens in the fleet."""
@@ -244,18 +244,26 @@ class AlienInvasion:
         self.settings.fleet_direction *= -1
 
     def _update_screen(self):
-        """Update images on the screen, and flip to the new screen."""
+        """Update images on the screen and flip to the new screen."""
         self.screen.fill(self.settings.bg_color)
-        for bullet in self.bullets.sprites():
-            bullet.draw_bullet()
+
+        # Draw the ship.
         self.ship.blitme()
+
+        # Draw bullets.
+        self.bullets.draw(self.screen)
+
+        # Draw aliens.
         self.aliens.draw(self.screen)
+
+        # Draw the scoreboard.
         self.sb.show_score()
 
-        # Draw the play button if the game is inactive.
+        # Draw the Play button when the game is not active.
         if not self.game_active:
             self.play_button.draw_button()
 
+        # Make the most recently drawn screen visible.
         pygame.display.flip()
 
 

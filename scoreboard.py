@@ -49,19 +49,21 @@ class Scoreboard:
         self.high_score_rect.top = 20
 
     def prep_ships(self):
-        """Prepare images showing the remaining lives. (me)"""
+        """Prepare the images showing the player's remaining lives."""
         self.ship_images = []
 
         for ship_number in range(self.stats.ships_left):
-            ship = self.ai_game.ship.image
-            self.ship_images.append(ship)
+            self.ship_images.append(self.ai_game.ship.image)
 
     def show_score(self):
-        """Draw the score, high score, and remaining lives. (me)"""
+        """Draw the score, high score, and remaining lives."""
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)
 
         for ship_number, ship_image in enumerate(self.ship_images):
             x_position = 20 + ship_number * (ship_image.get_width() + 10)
-            y_position = self.screen_rect.bottom - ship_image.get_height() - 20
+            y_position = (
+                self.screen_rect.bottom - ship_image.get_height() - 20
+            )
+
             self.screen.blit(ship_image, (x_position, y_position))
